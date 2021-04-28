@@ -45,7 +45,7 @@ export function BrandLogo(props) {
       )}
       <StyledLink to="/">
         <LogoTitle size={textSize} color={color}>
-          Servycing
+          Craftual
         </LogoTitle>
       </StyledLink>
     </BrandLogoContainer>

@@ -60,7 +60,7 @@ export function Services(props) {
 
   const fetchServices = async () => {
     setLoading(true);
-    const response = await Axios.get("http://localhost:9000/services").catch(
+    const response = await Axios.get("http://localhost:3000/services").catch(
       (err) => {
         console.log("Error: ", err);
       }
@@ -79,10 +79,10 @@ export function Services(props) {
 
   return (
     <ServicesContainer>
-      <Title>Most used services & More</Title>
+      <Title>Most popular models</Title>
       <ServicesWrapper>
         {isServicesEmpty && !isLoading && (
-          <WarningText>No Services are published yet!</WarningText>
+          <WarningText>No models are published yet!</WarningText>
         )}
         {isLoading && <WarningText>Loading...</WarningText>}
         {!isServicesEmpty &&

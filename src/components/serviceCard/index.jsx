@@ -101,6 +101,7 @@ export function ServiceCard(props) {
         <Marginer direction="vertical" margin={10} />
         <SpecialistName>{specialist.fullName}</SpecialistName>
       </ContentContainer>
+      {/*
       <BottomContainer>
         <RatingContainer>
           <FontAwesomeIcon icon={faStar} size="sm" />
@@ -111,6 +112,7 @@ export function ServiceCard(props) {
           <PriceText>${rate}/hr</PriceText>
         </PriceContainer>
       </BottomContainer>
+      */}
     </CardContainer>
   );
 }
