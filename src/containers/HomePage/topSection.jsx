@@ -6,8 +6,8 @@ import { Button } from "../../components/button";
 import { Marginer } from "../../components/marginer";
 import { deviceSize } from "../../components/responsive";
 
-import TopSectionBackgroundImg from "../../images/landing-page.jpg";
-import TheBestSpecialistsImg from "../../images/Work only with the best.png";
+import TopSectionBackgroundImg from "../../images/homePage.webp";
+import TheBestSpecialistsImg from "../../images/img2.png";
 
 const TopSectionContainer = styled.div`
   width: 100%;
@@ -86,10 +86,10 @@ export function TopSection(props) {
               textSize={isMobile ? 35 : 55}
             />
             <Marginer direction="vertical" margin={8} />
-            <SloganText>Find the right specialist</SloganText>
+            <SloganText>Find the right model</SloganText>
             <SloganText>For the job</SloganText>
             <Marginer direction="vertical" margin={15} />
-            <Button>Join Now</Button>
+            <Button>Join Now for Free</Button>
           </LogoContainer>
           {!isMobile && (
             <StandoutImage>

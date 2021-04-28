@@ -3,8 +3,6 @@ import { HomePage } from "./containers/HomePage";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { CustomerAccessPage } from "./containers/customerAccessPage";
-import { ExplorePage } from "./containers/explorePage";
-import { UploadPage } from "./containers/uploadPage";
 
 function App() {
   return (
@@ -17,8 +15,6 @@ function App() {
             exact
             component={CustomerAccessPage}
           />
-          <Route path= "/explore" exact component={ExplorePage} />
-          <Route path= "/upload" exact component={UploadPage} />
         </Switch>
       </Router>
     </div>

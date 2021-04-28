@@ -8,6 +8,7 @@ import {
   PageContainer,
 } from "../../components/pageContainer";
 import { deviceSize } from "../../components/responsive";
+import { ServiceCard } from "../../components/serviceCard";
 import { SpecialistAd } from "../../components/specialistAd";
 import { Services } from "./services";
 import { TopSection } from "./topSection";
@@ -25,6 +26,10 @@ const ContentContainer = styled.div`
   }
 `;
 
+const service = { "id": 1, "title": "I will landscape your garden", 
+"thumbnailUrl": "http://localhost:3000/garden.jpg", "rate": 34,
+"rating": 4, "specialist": { "id": 1, "fullName": "Mark brone" }}
+
 export function HomePage(props) {
   return (
     <PageContainer>
@@ -36,9 +41,11 @@ export function HomePage(props) {
         <ContentContainer>
           <Services />
         </ContentContainer>
+        {/*
         <Marginer direction="vertical" margin="5em" />
         <SpecialistAd />
         <Marginer direction="vertical" margin="5em" />
+        */}
       </InnerPageContainer>
       <Footer />
     </PageContainer>
