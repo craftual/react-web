@@ -3,7 +3,7 @@ import { HomePage } from "./containers/HomePage";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { CustomerAccessPage } from "./containers/customerAccessPage";
-import { ExplorePage } from "./containers/explorePage";
+import { ExplorePage } from "./containers/ExplorePage";
 import { UploadPage } from "./containers/uploadPage";
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={HomePage} />
+          <Route exact path="/ExplorePage" component={ExplorePage} />
           <Route
             path="/customer/access/:action"
             exact
