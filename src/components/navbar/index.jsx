@@ -54,6 +54,9 @@ export function Navbar(props) {
     <NavbarContainer useTransparent={useTransparent}>
       <BrandLogo />
       <AccessibilityContainer>
+        <Link to="/upload">
+          <Button size={11}>Upload</Button>
+        </Link>
         {!isMobile && <AnchorLink>Specialists Portal</AnchorLink>}
         {!isMobile && <Marginer direction="horizontal" margin={10} />}
         {!isMobile && <Seperator />}
