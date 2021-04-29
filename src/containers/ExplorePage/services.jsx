@@ -6,6 +6,8 @@ import { deviceSize } from "../../components/responsive";
 import { ServiceCard } from "../../components/serviceCard";
 import { Link } from "react-router-dom";
 
+
+
 const ServicesContainer = styled.div`
   width: 100%;
   display: flex;
@@ -52,6 +54,7 @@ const ViewMoreButton = styled(Button)`
 
 const wait = (num) => new Promise((rs) => setTimeout(rs, num));
 
+
 export function Services(props) {
   const [offeredServices, setServices] = useState([]);
   const [isLoading, setLoading] = useState(false);
@@ -80,7 +83,7 @@ export function Services(props) {
 
   return (
     <ServicesContainer>
-      <Title>Most popular models</Title>
+      <Title>Models For Every Field</Title>
       <ServicesWrapper>
         {isServicesEmpty && !isLoading && (
           <WarningText>No models are published yet!</WarningText>
@@ -88,17 +91,17 @@ export function Services(props) {
         {isLoading && <WarningText>Loading...</WarningText>}
         {!isServicesEmpty &&
           !isLoading &&
-          offeredServices.slice(0,4).map((service, idx) => (
+          offeredServices.slice(0, 12).map((service, idx) => (
             <ServiceCard key={idx} {...service} />
           ))}
       </ServicesWrapper>
+      
       <BottomContainer>
         {!isServicesEmpty && !isLoading && (
-          <Link to="/ExplorePage">
-            <ViewMoreButton>Browse Collection</ViewMoreButton>
-          </Link>
+            <ViewMoreButton>Next Page</ViewMoreButton>
         )}
       </BottomContainer>
+        
     </ServicesContainer>
   );
 }

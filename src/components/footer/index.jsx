@@ -9,13 +9,15 @@ import { useMediaQuery } from "react-responsive";
 
 const FooterContainer = styled.div`
   width: 100%;
-  min-height: 300px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2em 3em;
+  padding: 2em 0em;
   padding-bottom: 0;
-  border-top: 0.6px solid rgb(0, 0, 0, 0.3);
+  border-top: 5.6px solid rgb(0, 0, 0, 0.3);
+  background-color: rgba(38, 70, 83, 0.9);
+
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
     padding: 2em 12px;
@@ -25,14 +27,16 @@ const FooterContainer = styled.div`
 const TopContainer = styled.div`
   width: 100%;
   display: flex;
-  margin-bottom: 1em;
+  margin-bottom: 0em;
 `;
 
 const ContentContainer = styled.div`
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
+  flex-direction: row;
+  align-items: center;
+  padding: 1em 20em;
+  justify-content: space-between;
   &:not(:last-of-type) {
     margin-right: 3%;
   }
@@ -43,7 +47,7 @@ const BottomContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 70px;
-  border-top: 0.6px solid rgb(0, 0, 0, 0.3);
+  border-top: 5.6px solid rgb(0, 0, 0, 0.3);
   padding: 0 10px;
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
@@ -69,9 +73,9 @@ const Title = styled.h2`
 
 const FLink = styled.a`
   text-decoration: none;
-  color: #6f6f6f;
+  color: #fff;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 16px;
   cursor: pointer;
 
   &:not(:last-of-type) {
@@ -80,7 +84,7 @@ const FLink = styled.a`
 `;
 
 const PrivacyText = styled.h6`
-  color: #a3a3a3;
+  color: #fff;
   font-size: 11px;
   margin: 0;
   margin-left: 10px;
@@ -94,7 +98,7 @@ const PrivacyText = styled.h6`
 `;
 
 const SocialIcon = styled.div`
-  color: #8a8a8a;
+  color: #fff;
   font-size: 20px;
   cursor: pointer;
   transition: background-color, 200ms ease-in-out;
@@ -119,18 +123,6 @@ export function Footer(props) {
     <FooterContainer>
       <TopContainer>
         <ContentContainer>
-          <Title>Categories</Title>
-          <FLink>Car Repair</FLink>
-          <FLink>Carpentry</FLink>
-          <FLink>Landscaping</FLink>
-          <FLink>Cleaning</FLink>
-          <FLink>Home Improvement</FLink>
-          <FLink>Demolition</FLink>
-          <FLink>Management</FLink>
-          <FLink>Others</FLink>
-        </ContentContainer>
-        <ContentContainer>
-          <Title>Access</Title>
           <FLink>Login</FLink>
           <FLink>Join Us</FLink>
           <FLink>Login as Specialist</FLink>
@@ -139,8 +131,8 @@ export function Footer(props) {
       </TopContainer>
       <BottomContainer>
         <LeftBottomContainer>
-          <BrandLogo hideLogo color="#8A8A8A" textSize={isMobile ? 20 : 25} />
-          <PrivacyText> &#169; All Rights Reserved. 2020</PrivacyText>
+          <BrandLogo hideLogo color="#fff" textSize={isMobile ? 20 : 25} />
+          <PrivacyText> &#169; All Rights Reserved. 2021</PrivacyText>
         </LeftBottomContainer>
         <RightBottomContainer>
           <SocialIcon>
