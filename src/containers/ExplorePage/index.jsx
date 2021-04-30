@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Footer } from "../../components/footer";
 import { Marginer } from "../../components/marginer";
-import { Navbar } from "../../components/navbar";
+import { Navbar2 } from "../../components/navbar2";
 import {
   InnerPageContainer,
   PageContainer,
@@ -70,7 +70,7 @@ const Title = styled.h2`
 export function ExplorePage(props) {
   return (
     <PageContainer>
-      <Navbar />   
+      <Navbar2 />   
       <Marginer direction="vertical" margin="2em" />   
       <InnerPageContainer>
         <MiddleContainer>

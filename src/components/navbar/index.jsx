@@ -7,6 +7,7 @@ import { Marginer } from "../marginer";
 import { Link } from "react-router-dom";
 import { deviceSize } from "../responsive";
 import { useMediaQuery } from "react-responsive";
+import { render } from "react-dom";
 
 const NavbarContainer = styled.div`
   width: 100%;
@@ -54,12 +55,6 @@ export function Navbar(props) {
     <NavbarContainer useTransparent={useTransparent}>
       <BrandLogo />
       <AccessibilityContainer>
-        <Link to="/upload">
-          <Button size={11}>Upload</Button>
-        </Link>
-        {!isMobile && <AnchorLink>Specialists Portal</AnchorLink>}
-        {!isMobile && <Marginer direction="horizontal" margin={10} />}
-        {!isMobile && <Seperator />}
         <Marginer direction="horizontal" margin={10} />
         <Link to="/customer/access/signup">
           <Button size={11}>Register</Button>
@@ -69,4 +64,5 @@ export function Navbar(props) {
       </AccessibilityContainer>
     </NavbarContainer>
   );
+  render();
 }

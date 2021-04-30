@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { UploadBox } from "../../components/uploadBox";
 import { Footer } from "../../components/footer";
-import { Navbar } from "../../components/navbar";
+import { Navbar2 } from "../../components/navbar2";
 import {
   InnerPageContainer,
   PageContainer,
@@ -19,7 +19,7 @@ export function UploadPage(props) {
 
   return (
     <PageContainer>
-      <Navbar />
+      <Navbar2 />
       <StyledInnerContainer>
         <UploadBox initialActive={action} />
       </StyledInnerContainer>
