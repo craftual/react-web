@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Marginer } from "../marginer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import img1 from "../../images/img2.png";
 
 const CardContainer = styled.div`
   display: flex;
@@ -93,7 +94,7 @@ export function ServiceCard(props) {
     <CardContainer>
       <TopContainer>
         <ServiceThumbnail>
-          <img src={thumbnailUrl} alt={title} />
+          <img src={require(thumbnailUrl)} alt={title} />
         </ServiceThumbnail>
       </TopContainer>
       <ContentContainer>
