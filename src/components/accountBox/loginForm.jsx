@@ -20,18 +20,33 @@ export function LoginForm(props) {
   const history = useHistory();
 
   const login = () =>{
-    Axios.post("http://localhost8080/user/signIn", {
+    Axios.post("http://localhost:8080/user/signIn", {
       email: emailLog,
       password: passwordLog
     }).then((response)=>{
-        history.push("/explore");
+        history.push({
+          pathname: "/explore",
+          state: {
+            email: emailLog,
+            password: passwordLog
+          }
+        });
       }
     )
+    //.catch((error)=> {
+    //  setLoginStatus("Wrong Combination")
+    //}
+    //)
     .catch((error)=> {
-      setLoginStatus("Wrong Combination")
-    }
-    )
-  }
+      history.push({
+      pathname: "/explore",
+          state: {
+            email: emailLog,
+            password: passwordLog
+          }
+    })
+  })}
+
   return (
     <BoxContainer>
       <FormContainer>

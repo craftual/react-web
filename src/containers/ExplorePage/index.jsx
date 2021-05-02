@@ -7,6 +7,8 @@ import {
   InnerPageContainer,
   PageContainer,
 } from "../../components/pageContainer";
+import { Link } from "react-router-dom";
+import { Button3 } from "../../components/button3";
 import { deviceSize } from "../../components/responsive";
 import { ServiceCard } from "../../components/serviceCard";
 import { SpecialistAd } from "../../components/specialistAd";
@@ -73,6 +75,14 @@ export function ExplorePage(props) {
       <Navbar2 />   
       <Marginer direction="vertical" margin="2em" />   
       <InnerPageContainer>
+        <h2>Logged in as {props.location.state.email}</h2>
+        <Link to={{
+          pathname: "/settings",
+          state:{
+            email: props.location.state.email,
+            password: props.location.state.password}
+        }}><Button3 size={11}>Settings</Button3>
+        </Link>
         <MiddleContainer>
           <LeftContainer>
               <Title>Categories</Title>

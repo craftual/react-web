@@ -18,7 +18,7 @@ export function SignupForm(props) {
   const [passwordReg, setPasswordReg] = useState("");
 
   const register = () =>{
-    Axios.post("http://localhost8080/user/signIn", {
+    Axios.post("http://localhost:8080/user/signUp", {
       username: nameReg,
       email: emailReg,
       password: passwordReg

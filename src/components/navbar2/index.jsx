@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { BrandLogo } from "../brandLogo";
 import { Button } from "../button";
 import { Button2 } from "../button2";
+import { Button3 } from "../button3";
 import { Marginer } from "../marginer";
 
 import { Link } from "react-router-dom";
