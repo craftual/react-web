@@ -2,14 +2,23 @@ import React from "react";
 import styled from "styled-components";
 import { Marginer } from "../marginer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  InnerPageContainer,
+  PageContainer,
+} from "../../components/pageContainer";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import img1 from "../../images/img2.png";
+import img1 from "../../images/homePage.webp";
+import img2 from "../../images/img5.jpg";
+import img3 from "../../images/images.jfif";
+import img4 from "../../images/download.jfif";
+import { Button } from "../../components/button";
+import { Link } from "react-router-dom";
 
 const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  width: 300px;
+  width: 100%;
   min-height: 250px;
   background-color: #fff;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
@@ -34,7 +43,7 @@ const ServiceThumbnail = styled.div`
 const ContentContainer = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   flex: 1;
   padding: 15px 14px;
@@ -55,7 +64,7 @@ const Title = styled.h2`
   margin: 0;
   font-weight: 500;
   color: #000;
-  text-align: start;
+  text-align: center;
 `;
 
 const SpecialistName = styled.h4`
@@ -91,29 +100,58 @@ export function ServiceCard(props) {
   const { thumbnailUrl, specialist, id, title, rate, rating } = props;
 
   return (
+    <ContentContainer>
     <CardContainer>
       <TopContainer>
+        <Title>Architecture</Title>
         <ServiceThumbnail>
-          <img src={require(thumbnailUrl)} alt={title} />
+          <img src={img1} alt={title} />
         </ServiceThumbnail>
+        <Marginer direction="vertical" margin="1em" />
       </TopContainer>
-      <ContentContainer>
-        <Title>{title}</Title>
-        <Marginer direction="vertical" margin={10} />
-        <SpecialistName>{specialist.fullName}</SpecialistName>
-      </ContentContainer>
-      {/*
-      <BottomContainer>
-        <RatingContainer>
-          <FontAwesomeIcon icon={faStar} size="sm" />
-          {rating}
-        </RatingContainer>
-        <PriceContainer>
-          <StartingAtText>STARTING AT</StartingAtText>
-          <PriceText>${rate}/hr</PriceText>
-        </PriceContainer>
-      </BottomContainer>
-      */}
+      <Link to="/services">
+            <Button>Inspect</Button>
+      </Link>
     </CardContainer>
+
+    <CardContainer>
+      <TopContainer>
+        <Title>Game Character</Title>
+        <ServiceThumbnail>
+          <img src={img2} alt={title} />
+        </ServiceThumbnail>
+        <Marginer direction="vertical" margin="1em" />
+      </TopContainer>
+      <Link to="/services">
+            <Button>Inspect</Button>
+      </Link>
+    </CardContainer>
+    <CardContainer>
+      <TopContainer>
+        <Title>Game Character</Title>
+        <ServiceThumbnail>
+          <img src={img3} alt={title} />
+        </ServiceThumbnail>
+        <Marginer direction="vertical" margin="1em" />
+      </TopContainer>
+      <Link to="/services">
+            <Button>Inspect</Button>
+      </Link>
+    </CardContainer>
+    <CardContainer>
+      <TopContainer>
+        <Title>Object</Title>
+        <ServiceThumbnail>
+          <img src={img4} alt={title} />
+        </ServiceThumbnail>
+        <Marginer direction="vertical" margin="1em" />
+      </TopContainer>
+      <Link to="/services">
+            <Button>Inspect</Button>
+      </Link>
+    </CardContainer>
+    </ContentContainer>
+
+    
   );
 }

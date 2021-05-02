@@ -17,22 +17,7 @@ export function AccountTool(props) {
   const[passCh, setPassCh] = useState("");
   const history = useHistory();
 
-  const change = () =>{
-    //Axios.post("http://localhost:8080/user/signUp", {
-    //  email: props.location.state.email,
-    //  password: passCh
-    //})
-    history.push({
-      pathname: "/explore",
-          state: {
-            email: "asd",
-            password: passCh
-          }
-    })
-    console.log(props.state.email)
-    console.log(passCh)
-  }
-
+ 
   return (
     <BoxContainer>
       <FormContainer>
@@ -40,7 +25,7 @@ export function AccountTool(props) {
         <Input placeholder="new password(again)" />
       </FormContainer>
       <Marginer direction="vertical" margin="1em" />
-      <ChangeButton onClick={change}>Change Password</ChangeButton>
+      <ChangeButton>Change Password</ChangeButton>
       <Marginer direction="vertical" margin={5} />
     </BoxContainer>
   );

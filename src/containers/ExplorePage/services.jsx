@@ -84,6 +84,7 @@ export function Services(props) {
   return (
     <ServicesContainer>
       <Title>Models For Every Field</Title>
+      
       <ServicesWrapper>
         {isServicesEmpty && !isLoading && (
           <WarningText>No models are published yet!</WarningText>
@@ -91,8 +92,8 @@ export function Services(props) {
         {isLoading && <WarningText>Loading...</WarningText>}
         {!isServicesEmpty &&
           !isLoading &&
-          offeredServices.slice(0, 12).map((service, idx) => (
-            <ServiceCard key={idx} {...service} />
+          offeredServices.map((service, idx) => (
+            <ServiceCard/>
           ))}
       </ServicesWrapper>
       

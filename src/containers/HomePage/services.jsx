@@ -81,6 +81,7 @@ export function Services(props) {
   return (
     <ServicesContainer>
       <Title>Most popular models</Title>
+      {/*
       <ServicesWrapper>
         {isServicesEmpty && !isLoading && (
           <WarningText>No models are published yet!</WarningText>
@@ -92,13 +93,16 @@ export function Services(props) {
             <ServiceCard key={idx} {...service} />
           ))}
       </ServicesWrapper>
+          */}
+      <ServiceCard/>
+      {/*
       <BottomContainer>
         {!isServicesEmpty && !isLoading && (
           <Link to="/ExplorePage">
             <ViewMoreButton>Browse Collection</ViewMoreButton>
           </Link>
-        )}
       </BottomContainer>
+        */}
     </ServicesContainer>
   );
 }
