@@ -37,7 +37,7 @@ export function HomePage(props) {
           <Services />
         </ContentContainer>
         <Marginer direction="vertical" margin="5em" />
-        <SpecialistAd />
+        {/*<SpecialistAd />*/}
         <Marginer direction="vertical" margin="5em" />
       </InnerPageContainer>
       <Footer />
