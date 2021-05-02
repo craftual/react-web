@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Button } from "../../components/button";
 import { deviceSize } from "../../components/responsive";
-import { ServiceCard } from "../../components/serviceCard";
+import { ExploreCard } from "../../components/exploreCard";
 import { Link } from "react-router-dom";
 
 
@@ -84,7 +84,7 @@ export function Services(props) {
   return (
     <ServicesContainer>
       <Title>Models For Every Field</Title>
-      
+      {/*
       <ServicesWrapper>
         {isServicesEmpty && !isLoading && (
           <WarningText>No models are published yet!</WarningText>
@@ -96,13 +96,15 @@ export function Services(props) {
             <ServiceCard/>
           ))}
       </ServicesWrapper>
-      
+          */}
+          <ExploreCard/>
+      {/*
       <BottomContainer>
         {!isServicesEmpty && !isLoading && (
             <ViewMoreButton>Next Page</ViewMoreButton>
         )}
       </BottomContainer>
-        
-    </ServicesContainer>
+        */}
+    </ServicesContainer >
   );
 }
