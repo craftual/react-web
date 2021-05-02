@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { AccountForm } from "../../components/accountForm";
 import { Footer } from "../../components/footer";
 import { Navbar2 } from "../../components/navbar2";
+import { Marginer } from "../../components/marginer";
 import {
   InnerPageContainer,
   PageContainer,
@@ -34,6 +35,7 @@ export function SettingsPage(props) {
         <h2>Account Information</h2>
         email: {props.location.state.email}<hr></hr>
         password: {props.location.state.password}
+        <Marginer direction="vertical" margin="2em" />
         <FormContainer >
           <AccountForm initialActive={action} />
         </FormContainer>

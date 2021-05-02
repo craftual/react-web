@@ -12,6 +12,7 @@ export const FormContainer = styled.form`
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   box-shadow: 0px 0px 2.5px rgba(15, 15, 15, 0.19);
 `;
 
