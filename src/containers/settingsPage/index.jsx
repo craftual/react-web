@@ -34,9 +34,8 @@ export function SettingsPage(props) {
         <h2>Account Information</h2>
         email: {props.location.state.email}<hr></hr>
         password: {props.location.state.password}
-        <FormContainer>
-        <Input placeholder="Email"/>
-        <Input type="password"/>
+        <FormContainer >
+          <AccountForm initialActive={action} />
         </FormContainer>
       </StyledInnerContainer>
       <Footer />

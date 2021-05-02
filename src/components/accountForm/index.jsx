@@ -7,7 +7,7 @@ import { MutedLink } from "./common";
 
 const BoxContainer = styled.div`
   width: 280px;
-  min-height: 350px;
+  min-height: 250px;
   display: flex;
   flex-direction: column;
   border-radius: 19px;
@@ -19,7 +19,7 @@ const BoxContainer = styled.div`
 
 const TopContainer = styled.div`
   width: 100%;
-  height: 255px;
+  height: 55px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -72,7 +72,6 @@ export function AccountForm(props) {
         <TopContainer>
             <HeaderContainer>
             </HeaderContainer>
-            <font size = "5">Account Information</font>
         </TopContainer>
         <InnerContainer>
           <AccountTool />     

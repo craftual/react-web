@@ -56,7 +56,7 @@ export const Input = styled.input`
   }
 `;
 
-export const UploadButton = styled.button`
+export const ChangeButton = styled.button`
   padding: 11px 40%;
   width: 100%;
   color: #fff;
