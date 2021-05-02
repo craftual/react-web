@@ -5,10 +5,11 @@ import { BrandLogo } from "../../components/brandLogo";
 import { Button } from "../../components/button";
 import { Marginer } from "../../components/marginer";
 import { deviceSize } from "../../components/responsive";
-
+import "@google/model-viewer/dist/model-viewer-legacy";
 import TopSectionBackgroundImg from "../../images/homePage.webp";
 import TheBestSpecialistsImg from "../../images/img2.png";
 
+import "./styles.css";
 const TopSectionContainer = styled.div`
   width: 100%;
   height: 800px;
@@ -69,7 +70,13 @@ const SloganText = styled.h3`
     font-size: 24px;
   }
 `;
-
+/*
+          {!isMobile && (
+            <StandoutImage>
+              <img src={TheBestSpecialistsImg} alt="best in the field" />
+            </StandoutImage>
+          )}
+*/
 export function TopSection(props) {
   const { children } = props;
 
@@ -91,11 +98,8 @@ export function TopSection(props) {
             <Marginer direction="vertical" margin={15} />
             <Button>Join Now for Free</Button>
           </LogoContainer>
-          {!isMobile && (
-            <StandoutImage>
-              <img src={TheBestSpecialistsImg} alt="best in the field" />
-            </StandoutImage>
-          )}
+          <model-viewer class="main" src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717" alt="A 3D model of an astronaut" shadow-intensity="1" camera-controls auto-rotate ar>
+          </model-viewer>
         </TopSectionInnerContainer>
       </BackgroundFilter>
     </TopSectionContainer>

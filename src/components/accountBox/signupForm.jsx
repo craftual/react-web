@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import Axios from "axios";
+import { useHistory } from "react-router-dom";
 import { Marginer } from "../marginer";
 import {
   BoldLink,
@@ -16,13 +17,23 @@ export function SignupForm(props) {
   const [nameReg, setNameReg] = useState("");
   const [emailReg, setEmailReg] = useState("");
   const [passwordReg, setPasswordReg] = useState("");
+  const history = useHistory();
 
   const register = () =>{
     Axios.post("http://localhost:8080/user/signUp", {
       username: nameReg,
       email: emailReg,
       password: passwordReg
-    })
+    }).then((response)=>{
+      history.push({
+        pathname: "/explore",
+        state: {
+          email: emailReg,
+          password: passwordReg
+        }
+      });
+    }
+  )
     console.log(nameReg);
     console.log(emailReg);
     console.log(passwordReg);
