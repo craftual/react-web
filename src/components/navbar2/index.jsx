@@ -70,5 +70,5 @@ export function Navbar2(props) {
       </AccessibilityContainer>
     </NavbarContainer>
   );
-  render();
+  //render();
 }

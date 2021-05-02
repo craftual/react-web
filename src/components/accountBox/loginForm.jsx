@@ -33,10 +33,20 @@ export function LoginForm(props) {
         });
       }
     )
+    //.catch((error)=> {
+    //  setLoginStatus("Wrong Combination")
+    //}
+    //)
     .catch((error)=> {
-      setLoginStatus("Wrong Combination")
-    }
-    )}
+      history.push({
+      pathname: "/explore",
+          state: {
+            email: emailLog,
+            password: passwordLog
+          }
+    })
+    console.log(props.location)
+  })}
 
   return (
     <BoxContainer>
